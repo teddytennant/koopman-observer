@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "koopman-observer"
+version = "0.1.0"
+description = "Observation-corrected Koopman model of diffusion feature increments (arXiv 2610.10366)"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["jax", "numpy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
